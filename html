@@ -1,0 +1,456 @@
+
+Percakapan dengan Gemini
+buatkan saya web belajar bahasa inggris, berupa kuis-kuis untuk latihan toefl. buat buat sebagus mungkin dan semirip mungkin dengan tes toefl. buat juga nanti poin dan tingkat dan rekomendasi belajarnya. buatkan masing-masing htmlnya, java dan css nya. oh iya soalnya buat berdasarkan sumber terpercaya
+
+Saya akan membuatkan aplikasi web interaktif simulasi tes TOEFL lengkap dengan Listening, Structure, dan Reading, dilengkapi dengan sistem skoring resmi, timer real-time, mode latihan dengan pembahasan detail, serta rekomendasi belajar personal.
+
+Semua kode HTML, CSS (Tailwind CSS + Custom), dan JavaScript interaktif terintegrasi rapi dalam satu file mandiri di bawah ini.
+
+Aplikasi Latihan Tes TOEFL Interaktif
+
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOEFL Master - Simulasi & Latihan Tes TOEFL Interaktif</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.…</body>
+</html>
+Aplikasi web simulasi TOEFL interaktif ini telah lengkap dengan fitur:
+
+UI/UX standar simulasi tes TOEFL resmi.
+
+Modul Listening (audio sintetis TTS), Structure (grammar & error ID), dan Reading (split-view text passage).
+
+Mode Simulasi Exam dengan Timer real-time dan Mode Latihan langsung dengan pembahasan detail.
+
+Konversi skor resmi skala TOEFL ITP (310-677), analisis tingkat kemampuan (CEFR level), serta rekomendasi strategi belajar otomatis.
+
+nah bagaimana caranya agar aplikasi ini bisa digunakan orang lain
+
+Agar aplikasi web latihan TOEFL yang sudah kita buat dapat diakses dan digunakan oleh orang lain secara online (gratis dan mudah), Anda perlu meng-host (mengunggah) file HTML tersebut ke layanan penyedia web hosting.
+
+Berikut adalah 4 cara paling mudah dan gratis untuk membagikan aplikasi ini kepada orang lain:
+
+Cara 1: Menggunakan Netlify Drop (Paling Mudah, Tanpa Coding & Tanpa Akun Dulu)
+Ini adalah cara tercepat tanpa perlu install software apa pun:
+
+Simpan File:
+
+Simpan kode yang telah dibuat ke dalam satu file di komputer Anda dengan nama index.html.
+
+Masukkan file index.html tersebut ke dalam sebuah folder baru (misal diberi nama folder: kuis-toefl).
+
+Buka Netlify Drop:
+
+Buka browser dan kunjungi app.netlify.com/drop.
+
+Drag & Drop Folder:
+
+Drag (tarik) folder kuis-toefl Anda, lalu drop (lepaskan) di area kotak titik-titik di situs Netlify Drop tersebut.
+
+Selesai!
+
+Dalam beberapa detik, Netlify akan memberikan URL/Link acak (contoh: https://cool-toefl-app-1234.netlify.app).
+
+Bagikan link tersebut ke teman atau pengguna lain!
+
+Tips: Anda bisa membuat akun gratis di Netlify untuk mengubah nama link/URL tersebut agar lebih bagus (misal: https://kuis-toefl-pemula.netlify.app).
+
+Cara 2: Menggunakan GitHub Pages (Sangat Stabil & Profesional)
+Jika Anda ingin menyimpan kode dengan aman sekaligus mempublikasikannya:
+
+Buat akun di GitHub.com (gratis).
+
+Buat repositori baru (Create a new repository), beri nama misalnya toefl-practice.
+
+Unggah file index.html Anda ke repositori tersebut.
+
+Masuk ke tab Settings di halaman repositori GitHub Anda.
+
+Klik menu Pages di sebelah kiri.
+
+Pada bagian Source / Branch, pilih main (atau master) dan klik Save.
+
+Tunggu 1–2 menit, GitHub akan memberikan link web Anda (contoh: https://username-anda.github.io/toefl-practice/).
+
+Cara 3: Menggunakan Vercel (Sangat Cepat & Modern)
+Buka vercel.com dan buat akun gratis.
+
+Anda bisa langsung mengunggah folder project Anda atau menghubungkannya dengan akun GitHub Anda.
+
+Vercel secara otomatis akan mempublikasikan web Anda dan memberikan link khusus (contoh: [https://toefl-app.vercel.app](https://toefl-app.vercel.app)).
+
+Cara 4: Menggunakan Google Drive (Alternatif Cepat via Tiiny.host)
+Jika file HTML disimpan di Google Drive atau komputer lokal, Anda bisa menggunakan platform pendukung hosting instan seperti tiiny.host:
+
+Zip file/folder index.html Anda.
+
+Upload file ZIP tersebut ke Tiiny.host.
+
+Masukkan nama link yang diinginkan, dan web langsung aktif.
+
+💡 Tips Tambahan Agar Web Makin Bagus Digunakan Orang Lain:
+Fitur Audio Listening: Karena fitur listening menggunakan Web Speech API (suara dari browser), pastikan pengguna lain membukanya menggunakan browser modern seperti Google Chrome, Microsoft Edge, atau Safari di PC/Smartphone.
+
+Domain Sendiri: Jika nanti ingin websitenya memakai domain .com atau .id sendiri (misal: [www.belajartoefl.com](https://www.belajartoefl.com)), Anda bisa menghubungkannya dengan mudah di Netlify, Vercel, maupun GitHub Pages.
+
+web nya bagus. tapi coba buat masing masing seperti html, java dan css nya dipisah agar mudah
+
+Tentu! Memisahkan kode menjadi file HTML, CSS, dan JavaScript tersendiri adalah praktik standar dalam pembuatan web (clean code). Hal ini membuat struktur kode lebih mudah dibaca, dikelola, dan dikembangkan.
+
+Berikut adalah 3 file terpisah yang siap Anda simpan dalam satu folder yang sama.
+
+📂 Struktur Folder
+Pastikan file-file berikut disimpan dalam folder yang sama:
+
+Plaintext
+kuis-toefl/
+├── index.html
+├── style.css
+└── script.js
+1. index.html (Struktur Halaman Web)
+File ini berisi seluruh komponen tampilan visual seperti Navbar, Pilihan Mode, Area Soal, Timer, Audio Player, dan Modal Hasil Score.
+
+HTML
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulasi Tes TOEFL ITP - Online Practice</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS External -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 font-sans text-gray-800 flex flex-col min-h-screen">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="bg-blue-900 text-white shadow-md sticky top-0 z-30">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <i data-lucide="graduation-cap" class="w-8 h-8 text-yellow-400"></i>
+                <div>
+                    <h1 class="text-xl font-bold leading-tight">TOEFL® ITP Practice</h1>
+                    <p class="text-xs text-blue-200">Standardized English Assessment Platform</p>
+                </div>
+            </div>
+            
+            <div id="testHeaderControls" class="hidden flex items-center space-x-6">
+                <!-- Mode Badge -->
+                <span id="modeBadge" class="text-xs font-semibold px-2.5 py-1 rounded bg-blue-800 text-blue-200 border border-blue-700">
+                    EXAM MODE
+                </span>
+
+                <!-- Timer -->
+                <div class="flex items-center space-x-2 bg-blue-950 px-4 py-1.5 rounded-lg border border-blue-800 shadow-inner">
+                    <i data-lucide="clock" class="w-4 h-4 text-yellow-400 animate-pulse"></i>
+                    <span id="timerDisplay" class="font-mono text-lg font-bold text-yellow-400">00:00</span>
+                </div>
+
+                <button id="btnFinishTest" class="bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-3 py-2 rounded transition flex items-center space-x-1">
+                    <i data-lucide="check-circle" class="w-4 h-4"></i>
+                    <span>Selesai Tes</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="flex-grow max-w-7xl w-full mx-auto p-4 md:p-6">
+
+        <!-- SCREEN 1: LANDING & MODE SELECTION -->
+        <section id="screenWelcome" class="max-w-3xl mx-auto mt-6 bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+            <div class="bg-blue-900 p-6 text-white text-center">
+                <h2 class="text-2xl font-bold mb-2">Simulasi Tes TOEFL® ITP Interactive</h2>
+                <p class="text-blue-200 text-sm">Uji dan tingkatkan kemampuan Listening, Structure, dan Reading Comprehension Anda dengan format standar resmi.</p>
+            </div>
+
+            <div class="p-6 space-y-6">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Pilih Section / Bagian Tes:</label>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                        <label class="section-card border rounded-lg p-4 cursor-pointer hover:border-blue-500 transition flex flex-col justify-between active">
+                            <input type="radio" name="sectionSelect" value="listening" checked class="hidden">
+                            <div>
+                                <div class="flex items-center space-x-2 font-semibold text-blue-900 mb-1">
+                                    <i data-lucide="headphones" class="w-5 h-5"></i>
+                                    <span>Section 1</span>
+                                </div>
+                                <div class="text-xs text-gray-600 font-medium">Listening Comprehension</div>
+                            </div>
+                            <div class="mt-3 text-xs text-gray-500">Audio Dialogue & Questions</div>
+                        </label>
+
+                        <label class="section-card border rounded-lg p-4 cursor-pointer hover:border-blue-500 transition flex flex-col justify-between">
+                            <input type="radio" name="sectionSelect" value="structure" class="hidden">
+                            <div>
+                                <div class="flex items-center space-x-2 font-semibold text-blue-900 mb-1">
+                                    <i data-lucide="file-text" class="w-5 h-5"></i>
+                                    <span>Section 2</span>
+                                </div>
+                                <div class="text-xs text-gray-600 font-medium">Structure & Written Express.</div>
+                            </div>
+                            <div class="mt-3 text-xs text-gray-500">Grammar & Error Analysis</div>
+                        </label>
+
+                        <label class="section-card border rounded-lg p-4 cursor-pointer hover:border-blue-500 transition flex flex-col justify-between">
+                            <input type="radio" name="sectionSelect" value="reading" class="hidden">
+                            <div>
+                                <div class="flex items-center space-x-2 font-semibold text-blue-900 mb-1">
+                                    <i data-lucide="book-open" class="w-5 h-5"></i>
+                                    <span>Section 3</span>
+                                </div>
+                                <div class="text-xs text-gray-600 font-medium">Reading Comprehension</div>
+                            </div>
+                            <div class="mt-3 text-xs text-gray-500">Academic Passages & Vocabulary</div>
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Pilih Mode Pengerjaan:</label>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <label class="mode-card border-2 border-blue-600 rounded-lg p-4 cursor-pointer hover:bg-blue-50/50 transition flex items-start space-x-3 active">
+                            <input type="radio" name="modeSelect" value="exam" checked class="mt-1">
+                            <div>
+                                <div class="font-semibold text-gray-900 flex items-center space-x-2">
+                                    <span>Mode Ujian (Exam)</span>
+                                    <span class="text-[10px] bg-red-100 text-red-700 px-2 py-0.5 rounded font-bold uppercase">Timer</span>
+                                </div>
+                                <p class="text-xs text-gray-600 mt-1">Sama persis seperti tes asli. Dibatasi waktu, pembahasan hanya muncul setelah tes selesai.</p>
+                            </div>
+                        </label>
+
+                        <label class="mode-card border rounded-lg p-4 cursor-pointer hover:bg-blue-50/50 transition flex items-start space-x-3">
+                            <input type="radio" name="modeSelect" value="practice" class="mt-1">
+                            <div>
+                                <div class="font-semibold text-gray-900 flex items-center space-x-2">
+                                    <span>Mode Latihan (Practice)</span>
+                                    <span class="text-[10px] bg-green-100 text-green-700 px-2 py-0.5 rounded font-bold uppercase">Santai</span>
+                                </div>
+                                <p class="text-xs text-gray-600 mt-1">Tanpa timer. Pembahasan & kunci jawaban langsung terlihat saat Anda memilih jawaban.</p>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-4 border text-xs text-gray-600 space-y-1">
+                    <p class="font-semibold text-gray-800">📌 Catatan Tes:</p>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Skor akhir dikonversi berdasarkan standar tabel **TOEFL ITP Scale (310 - 677)**.</li>
+                        <li>Untuk Section Listening, pastikan audio/speaker perangkat Anda aktif.</li>
+                    </ul>
+                </div>
+
+                <button id="btnStartTest" class="w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-3.5 px-4 rounded-lg shadow-md transition flex items-center justify-center space-x-2 text-base">
+                    <span>Mulai Pengerjaan Tes</span>
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- SCREEN 2: TEST WORKSPACE -->
+        <section id="screenTest" class="hidden grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+            
+            <!-- LEFT PANEL: CONTENT (Reading Passage or Listening Audio) -->
+            <div id="leftPanel" class="lg:col-span-6 bg-white rounded-xl shadow border border-gray-200 p-5 hidden">
+                
+                <!-- LISTENING PLAYER -->
+                <div id="listeningContainer" class="hidden">
+                    <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4 text-center">
+                        <i data-lucide="volume-2" class="w-10 h-10 text-blue-700 mx-auto mb-2 animate-pulse"></i>
+                        <h4 class="font-semibold text-blue-900 text-sm mb-1">Audio Audio Conversation / Short Talk</h4>
+                        <p class="text-xs text-gray-600 mb-3">Dengarkan percakapan berikut untuk menjawab soal di sebelah kanan.</p>
+                        
+                        <div class="flex items-center justify-center space-x-3">
+                            <button id="btnPlayAudio" class="bg-blue-900 text-white px-4 py-2 rounded-full font-medium text-xs flex items-center space-x-2 hover:bg-blue-800 transition">
+                                <i data-lucide="play" class="w-4 h-4"></i>
+                                <span>Putar Audio Script</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-4 rounded border text-xs text-gray-700 leading-relaxed max-h-80 overflow-y-auto hidden" id="listeningScriptText">
+                        <span class="font-bold block mb-1 text-gray-900">[ Transkrip Audio ]</span>
+                        <p id="scriptTextContent"></p>
+                    </div>
+                </div>
+
+                <!-- READING PASSAGE -->
+                <div id="readingContainer" class="hidden">
+                    <div class="border-b pb-3 mb-3 flex justify-between items-center">
+                        <h3 class="font-bold text-gray-900 text-sm flex items-center space-x-2">
+                            <i data-lucide="book-open" class="w-4 h-4 text-blue-700"></i>
+                            <span id="passageTitle">Reading Passage</span>
+                        </h3>
+                        <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">Text ID: <span id="passageId">1</span></span>
+                    </div>
+                    <div id="passageContent" class="text-sm text-gray-800 leading-relaxed space-y-3 overflow-y-auto max-h-[60vh] pr-2 font-serif">
+                        <!-- Reading text dynamic -->
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT PANEL: QUESTION & OPTIONS -->
+            <div id="rightPanel" class="lg:col-span-12 bg-white rounded-xl shadow border border-gray-200 p-6 flex flex-col justify-between min-h-[500px]">
+                <div>
+                    <!-- Question Header & Indicator -->
+                    <div class="flex justify-between items-center border-b pb-4 mb-4">
+                        <div>
+                            <span class="text-xs font-bold text-blue-700 uppercase tracking-wider" id="sectionTitleDisplay">SECTION 1</span>
+                            <h3 class="text-lg font-bold text-gray-900" id="questionNumberIndicator">Soal No. 1 dari 10</h3>
+                        </div>
+                        <button id="btnBookmark" class="text-gray-400 hover:text-yellow-500 transition p-1" title="Tandai Soal">
+                            <i data-lucide="bookmark" class="w-5 h-5"></i>
+                        </button>
+                    </div>
+
+                    <!-- Question Text -->
+                    <div class="mb-6">
+                        <p class="text-base text-gray-800 font-medium leading-relaxed" id="questionText">Loading question...</p>
+                    </div>
+
+                    <!-- Options List -->
+                    <div class="space-y-3" id="optionsContainer">
+                        <!-- Dynamic Options rendered here -->
+                    </div>
+
+                    <!-- Instant Explanation Panel (Practice Mode Only) -->
+                    <div id="practiceExplanation" class="mt-6 p-4 rounded-lg bg-blue-50 border border-blue-200 hidden">
+                        <div class="flex items-center space-x-2 font-bold text-blue-900 text-xs mb-1">
+                            <i data-lucide="info" class="w-4 h-4"></i>
+                            <span>Pembahasan & Kunci Jawaban:</span>
+                        </div>
+                        <p id="explanationText" class="text-xs text-blue-950 leading-relaxed"></p>
+                    </div>
+                </div>
+
+                <!-- Question Navigation Footer -->
+                <div class="border-t pt-4 mt-6 flex flex-wrap justify-between items-center gap-3">
+                    <button id="btnPrev" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-lg text-xs font-semibold flex items-center space-x-1 transition disabled:opacity-50">
+                        <i data-lucide="chevron-left" class="w-4 h-4"></i>
+                        <span>Sebelumnya</span>
+                    </button>
+
+                    <!-- Question Number Palette Grid Toggle -->
+                    <div class="relative">
+                        <button id="btnTogglePalette" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-2 rounded-lg text-xs font-medium flex items-center space-x-1">
+                            <i data-lucide="grid" class="w-4 h-4"></i>
+                            <span>Daftar Soal</span>
+                        </button>
+                        
+                        <!-- Number Palette Popup -->
+                        <div id="palettePopup" class="hidden absolute bottom-12 right-0 w-64 bg-white border rounded-xl shadow-xl p-3 z-20">
+                            <div class="text-xs font-bold text-gray-700 mb-2 border-b pb-1">Navigasi Soal</div>
+                            <div id="paletteGrid" class="grid grid-cols-5 gap-2">
+                                <!-- Dynamic Palette buttons -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <button id="btnNext" class="bg-blue-900 hover:bg-blue-800 text-white px-5 py-2 rounded-lg text-xs font-semibold flex items-center space-x-1 transition">
+                        <span>Berikutnya</span>
+                        <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- SCREEN 3: SCORE & ANALYSIS REPORT -->
+        <section id="screenResult" class="hidden max-w-4xl mx-auto space-y-6">
+            
+            <!-- SCORE SUMMARY CARD -->
+            <div class="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden text-center">
+                <div class="bg-blue-900 text-white p-6">
+                    <i data-lucide="award" class="w-16 h-16 text-yellow-400 mx-auto mb-2"></i>
+                    <h2 class="text-2xl font-bold">Hasil Simulasi Tes TOEFL® ITP</h2>
+                    <p class="text-blue-200 text-xs mt-1">Laporan Performa & Estimasi Skor Resmi</p>
+                </div>
+
+                <div class="p-6 grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+                    <!-- Converted TOEFL Score -->
+                    <div class="bg-blue-50 border border-blue-200 rounded-xl p-4">
+                        <span class="text-xs font-bold text-blue-800 uppercase tracking-wider block mb-1">Estimasi Skor TOEFL</span>
+                        <div class="text-4xl font-extrabold text-blue-950" id="finalToeflScore">520</div>
+                        <span class="text-[11px] text-gray-500 mt-1 block">Skala Standar ITP: 310 - 677</span>
+                    </div>
+
+                    <!-- Accuracy Percentage -->
+                    <div class="bg-green-50 border border-green-200 rounded-xl p-4">
+                        <span class="text-xs font-bold text-green-800 uppercase tracking-wider block mb-1">Akurasi Jawaban</span>
+                        <div class="text-4xl font-extrabold text-green-700" id="finalAccuracy">80%</div>
+                        <span class="text-[11px] text-gray-500 mt-1 block"><span id="correctCountText">8</span> dari <span id="totalCountText">10</span> Soal Benar</span>
+                    </div>
+
+                    <!-- CEFR Level -->
+                    <div class="bg-purple-50 border border-purple-200 rounded-xl p-4">
+                        <span class="text-xs font-bold text-purple-800 uppercase tracking-wider block mb-1">Level CEFR Equivalence</span>
+                        <div class="text-3xl font-extrabold text-purple-900" id="cefrLevel">B2</div>
+                        <span class="text-[11px] text-purple-700 font-medium mt-1 block" id="cefrTitle">Vantage / Upper-Intermediate</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RECOMMENDATION & DIAGNOSTIC REPORT -->
+            <div class="bg-white rounded-xl shadow border border-gray-200 p-6 space-y-4">
+                <h3 class="text-base font-bold text-gray-900 flex items-center space-x-2 border-b pb-3">
+                    <i data-lucide="compass" class="w-5 h-5 text-blue-800"></i>
+                    <span>Analisis & Rekomendasi Belajar Personal</span>
+                </h3>
+
+                <div id="recommendationContent" class="text-sm text-gray-700 leading-relaxed space-y-3">
+                    <!-- Recommendation generated dynamically -->
+                </div>
+            </div>
+
+            <!-- REVIEW ALL QUESTIONS -->
+            <div class="bg-white rounded-xl shadow border border-gray-200 p-6">
+                <h3 class="text-base font-bold text-gray-900 mb-4 flex items-center space-x-2 border-b pb-3">
+                    <i data-lucide="check-square" class="w-5 h-5 text-blue-800"></i>
+                    <span>Review Jawaban & Pembahasan Lengkap</span>
+                </h3>
+
+                <div id="reviewQuestionsContainer" class="space-y-6">
+                    <!-- Review Item Cards Rendered Dynamically -->
+                </div>
+            </div>
+
+            <!-- ACTION BUTTONS -->
+            <div class="flex justify-center space-x-4 pt-4">
+                <button id="btnRestart" class="bg-blue-900 hover:bg-blue-800 text-white font-semibold px-6 py-3 rounded-lg shadow transition flex items-center space-x-2">
+                    <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+                    <span>Coba Tes Lagi</span>
+                </button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-100 border-t py-4 text-center text-xs text-gray-500 mt-8">
+        <p>© 2026 TOEFL® Practice Assessment Platform. For educational and test-preparation purposes.</p>
+    </footer>
+
+    <!-- JavaScript External -->
+    <script src="script.js"></script>
+</body>
+</html>
